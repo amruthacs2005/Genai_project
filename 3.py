@@ -40,7 +40,16 @@ vector_size=100, window=5, min_count=1, sg=0, workers=4)
 # Save the trained model (optional)
 model.save("legal_word2vec.model")
 
-# Explore the trained embeddings: Find the most similar words to a given word
+# Explore the trained embeddings: Find the most similar PS C:\Users\Amrutha c s\PycharmProjects\Gen AI> git --version
+# git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if
+# a path was included, verify that the path is correct and try again.
+# At line:1 char:1
+# + git --version
+# + ~~~
+#     + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+#     + FullyQualifiedErrorId : CommandNotFoundException
+#
+# PS C:\Users\Amrutha c s\PycharmProjects\Gen AI> words to a given word
 def find_similar_words(word, top_n=5):
     try:
         similar_words = model.wv.most_similar(word, topn=top_n)
